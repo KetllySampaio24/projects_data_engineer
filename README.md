@@ -44,7 +44,7 @@ como isso funciona em um cenário real de produção.
 ## 🚧 Status do projeto
 
 - [x] Camada Bronze (ingestão com seleção de ambiente hom/prd)
-- [ ] Camada Silver (limpeza e validação de dados)
+- [x] Camada Silver (limpeza e validação de dados)
 - [ ] Camada Gold (métricas de negócio)
 
 ## 📐 Resumo das tabelas do transacional (origem)
