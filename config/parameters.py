@@ -18,34 +18,26 @@ env = dbutils.widgets.get("env")
 ENV_CONFIG = {
     "hom": {
         "catalog": "ecommerce_hom",
-        "bronze_schema": "bronze",
-        "silver_schema": "silver",
-        "gold_schema": "gold",
         "volume_path": "/Volumes/ecommerce/default/bronze"
     },
-
     "prd": {
         "catalog": "ecommerce_prd",
-        "bronze_schema": "bronze",
-        "silver_schema": "silver",
-        "gold_schema": "gold",
         "volume_path": "/Volumes/ecommerce/default/bronze"
     }
 }
+
 
 # COMMAND ----------
 
 config = ENV_CONFIG[env]
 
-# COMMAND ----------
-
 catalog = config["catalog"]
-
-bronze_schema = config["bronze_schema"]
-silver_schema = config["silver_schema"]
-gold_schema = config["gold_schema"]
-
 volume_path = config["volume_path"]
+
+bronze_schema = "bronze"
+silver_schema = "silver"
+gold_schema = "gold"
+
 
 # COMMAND ----------
 
