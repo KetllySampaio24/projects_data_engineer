@@ -3,24 +3,13 @@
 # [tool.databricks.environment]
 # environment_version = "5"
 # ///
-dbutils.widgets.dropdown("env", "hom", ["hom", "prd"], "Ambiente")
+# MAGIC %run ../../config/parameters
+
+# COMMAND ----------
+
+# Define o ambiente que será utilizado
+dbutils.widgets.dropdown("env","hom",["hom", "prd"])
 env = dbutils.widgets.get("env")
- 
-ENV_CONFIG = {
-    "hom": {
-        "catalog": "ecommerce_hom",
-        "volume_path": "/Volumes/ecommerce/default/bronze",
-    },
-    "prd": {
-        "catalog": "ecommerce_prd",
-        "volume_path": "/Volumes/ecommerce/default/bronze",
-    },
-}
- 
-config = ENV_CONFIG[env]
-catalog = config["catalog"]
-volume_path = config["volume_path"]
-silver_schema = "silver"
 
 # COMMAND ----------
 
